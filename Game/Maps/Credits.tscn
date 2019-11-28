@@ -1,0 +1,336 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Maps/Scripts/Credits.gd" type="Script" id=1]
+[ext_resource path="res://Engine/Font/normal/normal_18px.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Engine/Font/light/light_12px.tres" type="DynamicFont" id=3]
+[ext_resource path="res://icon.png" type="Texture" id=4]
+[ext_resource path="res://Player/Texturen/Player_F_Knight.png" type="Texture" id=5]
+[ext_resource path="res://Player/Texturen/Player_M_Knight.png" type="Texture" id=6]
+[ext_resource path="res://Player/Texturen/Player_M_Elf.png" type="Texture" id=7]
+[ext_resource path="res://Player/Texturen/Player_M_Wizard.png" type="Texture" id=8]
+[ext_resource path="res://Player/Texturen/Player_F_Wizard.png" type="Texture" id=9]
+[ext_resource path="res://Player/Texturen/weapon_knight_sword.png" type="Texture" id=10]
+[ext_resource path="res://Maps/PowerUps/Speed.tscn" type="PackedScene" id=11]
+
+[sub_resource type="Animation" id=1]
+resource_name = "idle"
+length = 0.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("other/Player_F_Knight:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 4 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("other/Player_F_Knight2:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 4, 1, 2, 3 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("other/weapon_knight_sword:position")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 295.813, 272.036 ), Vector2( 295.813, 268.036 ), Vector2( 295.813, 272.036 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("other/Player_F_Knight3:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 4 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("other/Player_F_Knight4:frame")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 4 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("other/Player_F_Knight5:frame")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 4 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("other/Player_F_Knight6:frame")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 5, 6, 7, 8 ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "close"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Camera2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 192, 800 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "play"
+length = 60.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Camera2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 60 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 192, 112.5 ), Vector2( 192, 112.5 ), Vector2( 192, 800 ) ]
+}
+
+[node name="Credits" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="Text" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Dank" type="Label" parent="Text"]
+anchor_right = 1.0
+margin_bottom = 88.0
+custom_fonts/font = ExtResource( 2 )
+text = "Vielen  Dank furs Spielen"
+align = 1
+valign = 1
+
+[node name="Godot" type="RichTextLabel" parent="Text"]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 25.0
+margin_top = -14.5
+margin_right = -72.0
+margin_bottom = 34.5
+custom_fonts/mono_font = ExtResource( 3 )
+custom_fonts/bold_italics_font = ExtResource( 3 )
+custom_fonts/italics_font = ExtResource( 3 )
+custom_fonts/normal_font = ExtResource( 3 )
+bbcode_enabled = true
+bbcode_text = "Dieses Spiel wurde mit der [color=aqua][url=https://godotengine.org/]Godot Game Engine[/url][/color] Gemacht"
+text = "Dieses Spiel wurde mit der Godot Game Engine Gemacht"
+
+[node name="Charaktere" type="RichTextLabel" parent="Text"]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 24.0
+margin_top = 101.5
+margin_right = -20.0
+margin_bottom = 150.5
+custom_fonts/mono_font = ExtResource( 3 )
+custom_fonts/bold_italics_font = ExtResource( 3 )
+custom_fonts/italics_font = ExtResource( 3 )
+custom_fonts/normal_font = ExtResource( 3 )
+bbcode_enabled = true
+bbcode_text = "Die Charaktere sind von [color=aqua][url=https://0x72.itch.io]0x72[/url][/color] aus seinem [color=aqua][url=https://0x72.itch.io/dungeontileset-ii]dungeontileset II[/url][/color]"
+text = "Die Charaktere sind von 0x72 aus seinem dungeontileset II"
+
+[node name="Tileset" type="RichTextLabel" parent="Text"]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 24.0
+margin_top = 197.5
+margin_right = -20.0
+margin_bottom = 246.5
+custom_fonts/mono_font = ExtResource( 3 )
+custom_fonts/bold_italics_font = ExtResource( 3 )
+custom_fonts/italics_font = ExtResource( 3 )
+custom_fonts/normal_font = ExtResource( 3 )
+bbcode_enabled = true
+bbcode_text = "Das Tileset ist von [color=aqua][url=https://rottingpixels.itch.io/]RottingPixels[/url][/color] [color=aqua][url=https://rottingpixels.itch.io/temple-platformer]Das Tileset[/url][/color]"
+text = "Das Tileset ist von RottingPixels Das Tileset"
+
+[node name="Dammi" type="RichTextLabel" parent="Text"]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 24.0
+margin_top = 305.5
+margin_right = -20.0
+margin_bottom = 354.5
+custom_fonts/mono_font = ExtResource( 3 )
+custom_fonts/bold_italics_font = ExtResource( 3 )
+custom_fonts/italics_font = ExtResource( 3 )
+custom_fonts/normal_font = ExtResource( 3 )
+bbcode_enabled = true
+bbcode_text = "Die Story wurde von [color=aqua][url=https://www.instagram.com/dammi.de/?hl=de/]Florian D.[/url][/color]"
+text = "Die Story wurde von Florian D."
+
+[node name="PaulToni" type="RichTextLabel" parent="Text"]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 26.0
+margin_top = 409.5
+margin_right = -18.0
+margin_bottom = 458.5
+custom_fonts/mono_font = ExtResource( 3 )
+custom_fonts/bold_italics_font = ExtResource( 3 )
+custom_fonts/italics_font = ExtResource( 3 )
+custom_fonts/normal_font = ExtResource( 3 )
+bbcode_enabled = true
+bbcode_text = "Die Level wurden von Paul H. und [color=aqua][url=https://www.instagram.com/tonischossau/?hl=de/]Toni S.[/url][/color]"
+text = "Die Level wurden von Paul H. und Toni S."
+
+[node name="PaulToni2" type="RichTextLabel" parent="Text"]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 26.0
+margin_top = 506.5
+margin_right = -18.0
+margin_bottom = 555.5
+custom_fonts/mono_font = ExtResource( 3 )
+custom_fonts/bold_italics_font = ExtResource( 3 )
+custom_fonts/italics_font = ExtResource( 3 )
+custom_fonts/normal_font = ExtResource( 3 )
+bbcode_enabled = true
+bbcode_text = "Die Programmierung wurde von [color=aqua][url=https://www.youtube.com/channel/UCAApUJNIjaNfySMom_zN43A]Christoph R.[/url][/color] ubernommen"
+text = "Die Programmierung wurde von Christoph R. ubernommen"
+
+[node name="Label" type="Label" parent="Text"]
+margin_left = 7.0
+margin_top = 812.0
+margin_right = 238.0
+margin_bottom = 826.0
+custom_fonts/font = ExtResource( 3 )
+text = "1222121212"
+
+[node name="props" type="AnimationPlayer" parent="."]
+autoplay = "idle"
+anims/idle = SubResource( 1 )
+
+[node name="other" type="Control" parent="."]
+editor/display_folded = true
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="icon" type="Sprite" parent="other"]
+position = Vector2( 352, 111.337 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 4 )
+
+[node name="Player_F_Knight" type="Sprite" parent="other"]
+position = Vector2( 146.845, 160.085 )
+scale = Vector2( 1.3, 1.3 )
+texture = ExtResource( 5 )
+hframes = 9
+frame = 4
+
+[node name="Player_F_Knight2" type="Sprite" parent="other"]
+position = Vector2( 249.257, 182.519 )
+scale = Vector2( 1.3, 1.3 )
+texture = ExtResource( 6 )
+flip_h = true
+hframes = 9
+frame = 3
+
+[node name="Player_F_Knight3" type="Sprite" parent="other"]
+position = Vector2( 129.714, 371.789 )
+scale = Vector2( 1.3, 1.3 )
+texture = ExtResource( 7 )
+hframes = 9
+frame = 4
+
+[node name="Player_F_Knight4" type="Sprite" parent="other"]
+position = Vector2( 100.31, 473.966 )
+scale = Vector2( 1.3, 1.3 )
+texture = ExtResource( 8 )
+hframes = 9
+frame = 4
+
+[node name="Player_F_Knight5" type="Sprite" parent="other"]
+position = Vector2( 243.653, 486.463 )
+scale = Vector2( 1.3, 1.3 )
+texture = ExtResource( 9 )
+flip_h = true
+hframes = 9
+frame = 4
+
+[node name="Player_F_Knight6" type="Sprite" parent="other"]
+position = Vector2( 212.149, 592.093 )
+scale = Vector2( 1.3, 1.3 )
+texture = ExtResource( 6 )
+flip_h = true
+hframes = 9
+frame = 8
+
+[node name="weapon_knight_sword" type="Sprite" parent="other"]
+position = Vector2( 295.813, 270.155 )
+texture = ExtResource( 10 )
+
+[node name="Speed" parent="other" instance=ExtResource( 11 )]
+position = Vector2( 79.2254, 591.625 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "play"
+anims/close = SubResource( 3 )
+anims/play = SubResource( 2 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 192, 800 )
+current = true
+[connection signal="meta_clicked" from="Text/Godot" to="." method="_on_RichTextLabel_meta_clicked"]
+[connection signal="meta_clicked" from="Text/Charaktere" to="." method="_on_RichTextLabel_meta_clicked"]
+[connection signal="meta_clicked" from="Text/Tileset" to="." method="_on_RichTextLabel_meta_clicked"]
+[connection signal="meta_clicked" from="Text/Dammi" to="." method="_on_RichTextLabel_meta_clicked"]
+[connection signal="meta_clicked" from="Text/PaulToni" to="." method="_on_RichTextLabel_meta_clicked"]
+[connection signal="meta_clicked" from="Text/PaulToni2" to="." method="_on_RichTextLabel_meta_clicked"]

@@ -1,0 +1,57 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Maps/Scripts/BaseMap.gd" type="Script" id=1]
+[ext_resource path="res://Tileset/Tilesets/BG.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Tileset/Tilesets/FG.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 754.001, 10 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+[node name="BaseMap" type="Node2D"]
+script = ExtResource( 1 )
+camera_limit_left = -100000
+camera_limit_top = -100000
+
+[node name="TileMaps" type="Node2D" parent="."]
+editor/display_folded = true
+
+[node name="BG" parent="TileMaps" instance=ExtResource( 2 )]
+
+[node name="FG" parent="TileMaps" instance=ExtResource( 3 )]
+z_index = 12
+
+[node name="DeathZone" type="Area2D" parent="TileMaps"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMaps/DeathZone"]
+position = Vector2( 0, 134 )
+shape = SubResource( 1 )
+
+[node name="Enemys" type="Node2D" parent="."]
+
+[node name="Props" type="Node2D" parent="."]
+editor/display_folded = true
+
+[node name="Lava" type="Node2D" parent="Props"]
+
+[node name="Powerups" type="Node2D" parent="Props"]
+
+[node name="Player" type="Node2D" parent="."]
+
+[node name="Player" parent="Player" instance=ExtResource( 4 )]
+
+[node name="NextLevel" type="Area2D" parent="Player"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/NextLevel"]
+shape = SubResource( 2 )
+[connection signal="body_entered" from="TileMaps/DeathZone" to="." method="_on_DeathZone_body_entered"]
+[connection signal="isdead" from="Player/Player" to="." method="_on_Player_isdead"]
+[connection signal="isdead" from="Player/Player" to="." method="_on_Pausenmenu_opend"]
+[connection signal="closed" from="Player/Player/PlayerHUD/Pausenmenu" to="." method="_on_Pausenmenu_closed"]
+[connection signal="opend" from="Player/Player/PlayerHUD/Pausenmenu" to="." method="_on_Pausenmenu_opend"]
+
+[editable path="Player/Player"]
+
+[editable path="Player/Player/PlayerHUD"]

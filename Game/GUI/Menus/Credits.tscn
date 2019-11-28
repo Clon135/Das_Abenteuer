@@ -1,0 +1,71 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://GUI/Menus/BaseMenu.tscn" type="PackedScene" id=1]
+[ext_resource path="res://GUI/Menus/Scripts/Credits.gd" type="Script" id=2]
+[ext_resource path="res://Engine/Font/light/light_6px.tres" type="DynamicFont" id=3]
+
+[sub_resource type="StyleBoxEmpty" id=1]
+
+[sub_resource type="StyleBoxEmpty" id=2]
+
+[node name="Credits" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Optionbuttons" index="0"]
+margin_left = 24.0
+margin_top = -4.0
+margin_right = 349.0
+margin_bottom = 115.0
+rect_clip_content = false
+mouse_filter = 1
+custom_styles/focus = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
+custom_fonts/mono_font = ExtResource( 3 )
+custom_fonts/bold_italics_font = ExtResource( 3 )
+custom_fonts/italics_font = ExtResource( 3 )
+custom_fonts/bold_font = ExtResource( 3 )
+custom_fonts/normal_font = ExtResource( 3 )
+bbcode_enabled = true
+bbcode_text = "
+	Thank you for playing our game! this is a school projekt
+	and i hope you enjoy it
+	
+	The beautiful Textures are made by:
+		
+		Charakters: 
+		the Charakters are made by [color=aqua][url=https://0x72.itch.io]0x72[/url][/color] and there are out 
+		of his [color=aqua][url=https://0x72.itch.io/dungeontileset-ii]dungeontileset II[/url][/color]
+		
+		Tileset:
+		The Tileset is by [color=aqua][url=https://rottingpixels.itch.io/]RottingPixels[/url][/color] [color=aqua][url=https://rottingpixels.itch.io/temple-platformer]The Tileset[/url][/color]
+		
+		Everything else was made in Asprite
+		
+		
+		
+		
+		
+"
+text = "
+	Thank you for playing our game! this is a school projekt
+	and i hope you enjoy it
+	
+	The beautiful Textures are made by:
+		
+		Charakters: 
+		the Charakters are made by 0x72 and there are out 
+		of his dungeontileset II
+		
+		Tileset:
+		The Tileset is by RottingPixels The Tileset
+		
+		Everything else was made in Asprite
+		
+		
+		
+		
+		
+"
+scroll_active = false
+[connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]
+[connection signal="meta_clicked" from="Optionbuttons/RichTextLabel" to="." method="_on_RichTextLabel_meta_clicked"]

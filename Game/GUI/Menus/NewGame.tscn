@@ -1,0 +1,226 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://GUI/Menus/BaseMenu.tscn" type="PackedScene" id=1]
+[ext_resource path="res://GUI/Menus/Scripts/NewGame.gd" type="Script" id=2]
+[ext_resource path="res://Engine/Font/font/Light.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://GUI/Theme/Checkbox/CheckBox.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Player/Texturen/Player_F_Elf.png" type="Texture" id=5]
+[ext_resource path="res://Player/Texturen/Player_M_Elf.png" type="Texture" id=6]
+[ext_resource path="res://Engine/Font/light/light_6px.tres" type="DynamicFont" id=7]
+[ext_resource path="res://Player/Texturen/Player_F_Knight.png" type="Texture" id=8]
+[ext_resource path="res://Player/Texturen/Player_M_Knight.png" type="Texture" id=9]
+[ext_resource path="res://Player/Texturen/Player_F_Wizard.png" type="Texture" id=10]
+[ext_resource path="res://Player/Texturen/Player_M_Wizard.png" type="Texture" id=11]
+[ext_resource path="res://GUI/Theme/arrow/Tex/GUI_JMP_button6.png" type="Texture" id=12]
+[ext_resource path="res://GUI/Theme/arrow/Tex/GUI_JMP_button8.png" type="Texture" id=13]
+[ext_resource path="res://GUI/Theme/arrow/Tex/GUI_JMP_button7.png" type="Texture" id=14]
+[ext_resource path="res://GUI/Theme/arrow/Tex/GUI_JMP_button9.png" type="Texture" id=15]
+
+[sub_resource type="DynamicFont" id=1]
+size = 10
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 8
+font_data = ExtResource( 3 )
+
+[node name="BaseMenu" index="0" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+
+[node name="Optionbuttons" parent="." index="2"]
+mouse_filter = 2
+
+[node name="Charakter" type="Control" parent="Optionbuttons" index="0"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_top = 4.0
+margin_right = -4.0
+margin_bottom = -46.0
+mouse_filter = 2
+
+[node name="charakter" type="Label" parent="Optionbuttons/Charakter" index="0"]
+custom_fonts/font = SubResource( 1 )
+text = "Charakter:"
+
+[node name="Elf" parent="Optionbuttons/Charakter" index="1" instance=ExtResource( 4 )]
+margin_left = 31.4886
+margin_top = 57.2354
+margin_right = 38.4886
+margin_bottom = 64.2354
+pressed = true
+
+[node name="Player_F_Elf" type="Sprite" parent="Optionbuttons/Charakter/Elf" index="0"]
+position = Vector2( -7, -23 )
+texture = ExtResource( 5 )
+hframes = 9
+frame = 1
+
+[node name="Player_M_Elf" type="Sprite" parent="Optionbuttons/Charakter/Elf" index="1"]
+position = Vector2( 13, -23 )
+texture = ExtResource( 6 )
+hframes = 9
+frame = 1
+
+[node name="elf" type="Label" parent="Optionbuttons/Charakter/Elf" index="2"]
+margin_left = -15.0
+margin_top = -45.0
+margin_right = 22.0
+margin_bottom = -32.0
+custom_fonts/font = SubResource( 2 )
+text = "Elf"
+align = 1
+valign = 1
+
+[node name="Label" type="Label" parent="Optionbuttons/Charakter/Elf" index="3"]
+margin_left = 23.5114
+margin_top = -31.2354
+margin_right = 88.5114
+margin_bottom = 5.7646
+custom_fonts/font = ExtResource( 7 )
+text = "No Weapons
+high Movement Speed
+medium health"
+autowrap = true
+
+[node name="Ritter" parent="Optionbuttons/Charakter" index="2" instance=ExtResource( 4 )]
+margin_left = 134.628
+margin_top = 57.2354
+margin_right = 141.628
+margin_bottom = 64.2354
+
+[node name="Player_F_Knight" type="Sprite" parent="Optionbuttons/Charakter/Ritter" index="0"]
+position = Vector2( -6, -22 )
+texture = ExtResource( 8 )
+hframes = 9
+frame = 1
+
+[node name="Player_M_Knight" type="Sprite" parent="Optionbuttons/Charakter/Ritter" index="1"]
+position = Vector2( 11, -22 )
+texture = ExtResource( 9 )
+hframes = 9
+frame = 1
+
+[node name="ritter" type="Label" parent="Optionbuttons/Charakter/Ritter" index="2"]
+margin_left = -22.0
+margin_top = -45.0
+margin_right = 28.0
+margin_bottom = -32.0
+custom_fonts/font = SubResource( 2 )
+text = "Ritter"
+align = 1
+valign = 1
+
+[node name="Label" type="Label" parent="Optionbuttons/Charakter/Ritter" index="3"]
+margin_left = 22.0
+margin_top = -29.0
+margin_right = 89.0
+margin_bottom = 18.0
+custom_fonts/font = ExtResource( 7 )
+text = "Sword
+Slow Movement Speed
+High Health"
+autowrap = true
+
+[node name="Magier" parent="Optionbuttons/Charakter" index="3" instance=ExtResource( 4 )]
+margin_left = 240.382
+margin_top = 57.0346
+margin_right = 247.382
+margin_bottom = 64.0346
+
+[node name="Player_F_Wizard" type="Sprite" parent="Optionbuttons/Charakter/Magier" index="0"]
+position = Vector2( -5, -23 )
+texture = ExtResource( 10 )
+hframes = 9
+frame = 1
+
+[node name="Player_M_Wizard" type="Sprite" parent="Optionbuttons/Charakter/Magier" index="1"]
+position = Vector2( 11, -23 )
+texture = ExtResource( 11 )
+hframes = 9
+frame = 1
+
+[node name="magier" type="Label" parent="Optionbuttons/Charakter/Magier" index="2"]
+margin_left = -26.0
+margin_top = -45.0
+margin_right = 31.0
+margin_bottom = -32.0
+custom_fonts/font = SubResource( 2 )
+text = "Magier"
+align = 1
+valign = 1
+
+[node name="Label" type="Label" parent="Optionbuttons/Charakter/Magier" index="3"]
+margin_left = 20.618
+margin_top = -29.0346
+margin_right = 83.618
+margin_bottom = 17.9654
+custom_fonts/font = ExtResource( 7 )
+text = "Plasma Ball
+Medium Movement Speed
+medium Health"
+autowrap = true
+
+[node name="Gender" type="Control" parent="Optionbuttons" index="1"]
+editor/display_folded = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_top = 77.0
+margin_right = -61.0
+margin_bottom = -7.0
+mouse_filter = 2
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="gender" type="Label" parent="Optionbuttons/Gender" index="0"]
+custom_fonts/font = SubResource( 1 )
+text = "Geschlecht"
+
+[node name="Male" parent="Optionbuttons/Gender" index="1" instance=ExtResource( 4 )]
+margin_left = 124.942
+margin_top = 16.5337
+margin_right = 131.942
+margin_bottom = 23.5337
+pressed = true
+
+[node name="male" type="Label" parent="Optionbuttons/Gender/Male" index="0"]
+margin_left = -73.0
+margin_top = -2.0
+margin_right = 3.0
+margin_bottom = 9.0
+custom_fonts/font = SubResource( 1 )
+text = "Meanlich"
+
+[node name="Female" parent="Optionbuttons/Gender" index="2" instance=ExtResource( 4 )]
+margin_left = 250.357
+margin_top = 16.8658
+margin_right = 258.357
+margin_bottom = 23.8658
+
+[node name="female" type="Label" parent="Optionbuttons/Gender/Female" index="0"]
+margin_left = -73.0
+margin_top = -2.0
+margin_right = 3.0
+margin_bottom = 9.0
+custom_fonts/font = SubResource( 1 )
+text = "Weiblich"
+
+[node name="beginn" type="TextureButton" parent="." index="4"]
+margin_left = 358.0
+margin_top = 166.0
+margin_right = 374.0
+margin_bottom = 177.0
+rect_scale = Vector2( -1.2, 1.2 )
+texture_normal = ExtResource( 12 )
+texture_pressed = ExtResource( 13 )
+texture_hover = ExtResource( 14 )
+texture_disabled = ExtResource( 15 )
+[connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]
+[connection signal="toggled" from="Optionbuttons/Charakter/Elf" to="." method="_on_Elf_toggled"]
+[connection signal="toggled" from="Optionbuttons/Charakter/Ritter" to="." method="_on_Ritter_toggled"]
+[connection signal="toggled" from="Optionbuttons/Charakter/Magier" to="." method="_on_Magier_toggled"]
+[connection signal="toggled" from="Optionbuttons/Gender/Male" to="." method="_on_Male_toggled"]
+[connection signal="toggled" from="Optionbuttons/Gender/Female" to="." method="_on_Female_toggled"]
+[connection signal="pressed" from="beginn" to="." method="_on_beginn_pressed"]

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Engine/Settings/Settings.gd" type="Script" id=1]
+
+
+
+[resource]
+script = ExtResource( 1 )
+settingsfile = "res://settings.save"
+musik = 0.0
+effekts = 0.0
+showfps = false
+fullscreen = false
+borderless = false
+vsync = true
+autosave = true

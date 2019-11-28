@@ -1,0 +1,19 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://GUI/Theme/Button/Button_Hover.tres" type="StyleBox" id=1]
+[ext_resource path="res://GUI/Theme/Button/Button_Pressed.tres" type="StyleBox" id=2]
+[ext_resource path="res://GUI/Theme/Button/Button_Disabled.tres" type="StyleBox" id=3]
+[ext_resource path="res://GUI/Theme/Button/Button_Normal.tres" type="StyleBox" id=4]
+[ext_resource path="res://Engine/Font/light/light_6px.tres" type="DynamicFont" id=5]
+
+[sub_resource type="StyleBoxEmpty" id=1]
+
+[node name="Button" type="Button"]
+margin_right = 12.0
+margin_bottom = 20.0
+custom_styles/hover = ExtResource( 1 )
+custom_styles/pressed = ExtResource( 2 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/disabled = ExtResource( 3 )
+custom_styles/normal = ExtResource( 4 )
+custom_fonts/font = ExtResource( 5 )

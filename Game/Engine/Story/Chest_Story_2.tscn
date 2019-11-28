@@ -1,0 +1,233 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Engine/Story/Script/Chest_Story_2.gd" type="Script" id=1]
+[ext_resource path="res://Tileset/Textures/Props_Chest_Gold.png" type="Texture" id=2]
+[ext_resource path="res://Engine/Font/normal/normal_6px.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Engine/Story/GoldCoin.tscn" type="PackedScene" id=4]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Close"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 2, 1, 0 ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "Full"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 3, 4, 5 ]
+}
+
+[sub_resource type="Animation" id=3]
+length = 0.7
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 3, 4, 5 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Coins/GoldCoin:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.4, 0.6872 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( -8, 5 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Coins/GoldCoin2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.4, 0.6872 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 4, 3 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Coins/GoldCoin3:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.4, 0.6872 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( -6, 4 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Coins/GoldCoin4:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0.4, 0.6872 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 7, 4 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Coins/GoldCoin5:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0.4, 0.6872 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( -3, 3 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Coins/GoldCoin6:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0.4, 0.6872 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 1, 2 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Coins/GoldCoin7:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0.4, 0.6872 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 11, 2 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Coins/GoldCoin8:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0.4, 0.6872 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( -10, 1 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Coins:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Coins:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 17, 16 )
+
+[node name="Chest" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+vframes = 3
+hframes = 3
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Close = SubResource( 1 )
+anims/Full = SubResource( 2 )
+anims/Opend = SubResource( 3 )
+
+[node name="Area2D" type="Area2D" parent="."]
+editor/display_folded = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+visible = false
+shape = SubResource( 4 )
+
+[node name="Label" type="Label" parent="."]
+visible = false
+margin_left = -2.0
+margin_top = -17.0
+margin_right = 2.0
+margin_bottom = -10.0
+custom_fonts/font = ExtResource( 3 )
+text = "e"
+
+[node name="Coins" type="Node2D" parent="."]
+visible = false
+
+[node name="GoldCoin" parent="Coins" instance=ExtResource( 4 )]
+position = Vector2( -8, 5 )
+
+[node name="GoldCoin2" parent="Coins" instance=ExtResource( 4 )]
+position = Vector2( 4, 3 )
+
+[node name="GoldCoin3" parent="Coins" instance=ExtResource( 4 )]
+position = Vector2( -6, 4 )
+
+[node name="GoldCoin4" parent="Coins" instance=ExtResource( 4 )]
+position = Vector2( 7, 4 )
+
+[node name="GoldCoin5" parent="Coins" instance=ExtResource( 4 )]
+position = Vector2( -3, 3 )
+
+[node name="GoldCoin6" parent="Coins" instance=ExtResource( 4 )]
+position = Vector2( 1, 2 )
+
+[node name="GoldCoin7" parent="Coins" instance=ExtResource( 4 )]
+position = Vector2( 11, 2 )
+
+[node name="GoldCoin8" parent="Coins" instance=ExtResource( 4 )]
+position = Vector2( -10, 1 )

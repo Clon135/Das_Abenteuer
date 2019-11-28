@@ -1,0 +1,23 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://GUI/Theme/Checkbox/Tex/GUI_JMP_button12.png" type="Texture" id=1]
+[ext_resource path="res://GUI/Theme/Checkbox/Tex/GUI_JMP_button11.png" type="Texture" id=2]
+[ext_resource path="res://GUI/Theme/Slider/Slider_Slider.tres" type="StyleBox" id=3]
+[ext_resource path="res://GUI/Theme/Slider/Slider_Grabber.tres" type="StyleBox" id=4]
+
+[sub_resource type="StyleBoxEmpty" id=1]
+
+[sub_resource type="StyleBoxEmpty" id=2]
+
+[sub_resource type="StyleBoxEmpty" id=3]
+
+[node name="HSlider" type="HSlider"]
+margin_right = 11.0
+margin_bottom = 5.0
+custom_icons/grabber_highlight = ExtResource( 1 )
+custom_icons/grabber = ExtResource( 2 )
+custom_styles/slider = ExtResource( 3 )
+custom_styles/grabber_disabled = SubResource( 1 )
+custom_styles/grabber_highlight = ExtResource( 4 )
+custom_styles/grabber_area = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )

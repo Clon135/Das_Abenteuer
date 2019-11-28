@@ -1,0 +1,182 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Player/Scripts/isdead.gd" type="Script" id=1]
+[ext_resource path="res://Tileset/Tilesets/BG.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Engine/Font/normal/normal_24px.tres" type="DynamicFont" id=3]
+[ext_resource path="res://GUI/Theme/Button/Button.tscn" type="PackedScene" id=4]
+
+
+[sub_resource type="Animation" id=1]
+resource_name = "init"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ), Color( 0.184314, 0.184314, 0.184314, 0.290196 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Label:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Retry:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("MM:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("BG:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "load"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.184314, 0.184314, 0.184314, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("BG:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Label:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Retry:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("MM:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+
+[node name="isdead" type="CanvasLayer"]
+script = ExtResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color( 0.184314, 0.184314, 0.184314, 0 )
+
+[node name="BG" parent="." instance=ExtResource( 2 )]
+modulate = Color( 1, 1, 1, 0 )
+tile_data = PoolIntArray( 0, 1, 0, 2, 1, 0, 4, 1, 0, 6, 1, 0, 8, 1, 0, 10, 1, 0, 12, 1, 0, 14, 1, 0, 16, 1, 0, 18, 1, 0, 20, 1, 0, 22, 1, 0, 65536, 10, 0, 65537, 1, 0, 65539, 1, 0, 65541, 1, 0, 65543, 1, 0, 65545, 1, 0, 65547, 1, 0, 65549, 1, 0, 65551, 1, 0, 65553, 1, 0, 65555, 1, 0, 65557, 1, 0, 65559, 10, 0, 131072, 1, 0, 131074, 5, 0, 131076, 5, 0, 131078, 1, 0, 131080, 1, 0, 131082, 1, 0, 131084, 1, 0, 131086, 1, 0, 131088, 1, 0, 131090, 1, 0, 131092, 1, 0, 131094, 1, 0, 196608, 10, 0, 196609, 1, 0, 196611, 5, 0, 196613, 1, 0, 196615, 1, 0, 196617, 1, 0, 196619, 1, 0, 196621, 5, 0, 196623, 5, 0, 196625, 5, 0, 196627, 1, 0, 196629, 1, 0, 196631, 10, 0, 262144, 1, 0, 262146, 1, 0, 262148, 1, 0, 262150, 1, 0, 262152, 1, 0, 262154, 1, 0, 262156, 1, 0, 262158, 1, 0, 262160, 5, 0, 262162, 1, 0, 262164, 1, 0, 262166, 1, 0, 327680, 10, 0, 327681, 1, 0, 327683, 1, 0, 327685, 1, 0, 327687, 1, 0, 327689, 1, 0, 327691, 1, 0, 327693, 1, 0, 327695, 1, 0, 327697, 1, 0, 327699, 1, 0, 327701, 1, 0, 327703, 10, 0, 393216, 1, 0, 393218, 1, 0, 393220, 1, 0, 393222, 1, 0, 393224, 1, 0, 393226, 1, 0, 393228, 1, 0, 393230, 1, 0, 393232, 1, 0, 393234, 1, 0, 393236, 1, 0, 393238, 1, 0, 458752, 10, 0, 458753, 1, 0, 458755, 1, 0, 458757, 1, 0, 458759, 1, 0, 458761, 5, 0, 458763, 1, 0, 458765, 1, 0, 458767, 1, 0, 458769, 1, 0, 458771, 1, 0, 458773, 1, 0, 458775, 10, 0, 524288, 1, 0, 524290, 1, 0, 524292, 1, 0, 524294, 1, 0, 524296, 5, 0, 524298, 5, 0, 524300, 1, 0, 524302, 1, 0, 524304, 1, 0, 524306, 1, 0, 524308, 1, 0, 524310, 1, 0, 589824, 10, 0, 589825, 1, 0, 589827, 1, 0, 589829, 1, 0, 589831, 1, 0, 589833, 1, 0, 589835, 1, 0, 589837, 1, 0, 589839, 1, 0, 589841, 1, 0, 589843, 1, 0, 589845, 1, 0, 589847, 10, 0, 655360, 1, 0, 655362, 1, 0, 655364, 1, 0, 655366, 1, 0, 655368, 1, 0, 655370, 1, 0, 655372, 1, 0, 655374, 1, 0, 655376, 5, 0, 655378, 5, 0, 655380, 1, 0, 655382, 1, 0, 720896, 10, 0, 720897, 1, 0, 720899, 1, 0, 720901, 1, 0, 720903, 1, 0, 720905, 1, 0, 720907, 1, 0, 720909, 1, 0, 720911, 1, 0, 720913, 5, 0, 720915, 5, 0, 720917, 1, 0, 720919, 10, 0, 786432, 5, 0, 786434, 1, 0, 786436, 1, 0, 786438, 1, 0, 786440, 1, 0, 786442, 1, 0, 786444, 1, 0, 786446, 1, 0, 786448, 1, 0, 786450, 1, 0, 786452, 1, 0, 786454, 1, 0, 851968, 9, 0, 851969, 5, 0, 851971, 1, 0, 851973, 1, 0, 851975, 1, 0, 851977, 1, 0, 851979, 1, 0, 851981, 1, 0, 851983, 1, 0, 851985, 1, 0, 851987, 1, 0, 851989, 1, 0, 851991, 10, 0, 917504, 10, 0, 917505, 10, 0, 917506, 10, 0, 917507, 10, 0, 917508, 10, 0, 917509, 10, 0, 917510, 10, 0, 917511, 10, 0, 917512, 10, 0, 917513, 10, 0, 917514, 10, 0, 917515, 10, 0, 917516, 10, 0, 917517, 10, 0, 917518, 10, 0, 917519, 10, 0, 917520, 10, 0, 917521, 10, 0, 917522, 10, 0, 917523, 10, 0, 917524, 10, 0, 917525, 10, 0, 917526, 10, 0, 917527, 10, 0 )
+
+[node name="Label" type="Label" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+anchor_right = 1.0
+margin_bottom = 81.0
+custom_fonts/font = ExtResource( 3 )
+text = "You Died"
+align = 1
+valign = 1
+
+[node name="Retry" parent="." instance=ExtResource( 4 )]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 17.0
+margin_top = 198.27
+margin_right = 86.0
+margin_bottom = 217.27
+mouse_filter = 1
+text = "Back"
+
+[node name="MM" parent="." instance=ExtResource( 4 )]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 299.637
+margin_top = 197.665
+margin_right = 367.637
+margin_bottom = 216.665
+mouse_filter = 1
+text = "Retry"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "load"
+anims/init = SubResource( 1 )
+anims/load = SubResource( 2 )
+[connection signal="pressed" from="Retry" to="." method="_on_Retry_pressed"]
+[connection signal="pressed" from="MM" to="." method="_on_MM_pressed"]
