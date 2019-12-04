@@ -142,6 +142,13 @@ modulate = Color( 1, 1, 1, 0 )
 
 [node name="anim" type="AnimationPlayer" parent="."]
 anims/load = SubResource( 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 46.0
+margin_top = 246.0
+margin_right = 199.0
+margin_bottom = 260.0
+text = "Credits Link zur website"
 [connection signal="pressed" from="Startmenu/Language/Ger/Ger" to="." method="_on_Ger_pressed"]
 [connection signal="pressed" from="Startmenu/Language/Eng/Eng" to="." method="_on_Eng_pressed"]
 

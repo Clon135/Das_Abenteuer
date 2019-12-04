@@ -23,7 +23,7 @@ func _ready():
 	level = Player.lastlevel
 	current_dialog = 0
 	
-	new_dialog()
+	$Timer.start()
 	
 	if Player.klasse == "ritter":
 		
@@ -33,6 +33,7 @@ func _ready():
 func _input(event):
 	
 	if Input.is_action_just_pressed("ui_accept"):
+		
 		new_dialog()
 
 func new_dialog():
@@ -73,9 +74,13 @@ func new_dialog():
 		$NPC/NPC1/Dialog/Control.hide()
 		nextlevel = "res://Maps/Map_003.tscn"
 
-
 func _on_NextLevel_body_entered(body):
 	
 	if body.name == "Player":
 # warning-ignore:return_value_discarded
 		get_tree().change_scene(nextlevel)
+
+
+func _on_Timer_timeout():
+	
+	new_dialog()

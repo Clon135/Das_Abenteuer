@@ -17,7 +17,7 @@ extents = Vector2( 28, 40 )
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 11.168, 46.2783 )
 
-[node name="Map_002" instance=ExtResource( 1 )]
+[node name="Map_002" index="0" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
 camera_limit_left = -48
 camera_limit_top = -368
@@ -32,9 +32,6 @@ tile_data = PoolIntArray( -1638286, 1, 0, -1638285, 1, 1, -1638284, 1, 1, -16382
 
 [node name="CollisionShape2D" parent="TileMaps/DeathZone" index="0"]
 position = Vector2( 1755.48, 512.876 )
-
-[node name="Enemys" parent="." index="1"]
-editor/display_folded = true
 
 [node name="Demon_Medium1" parent="Enemys" index="0" instance=ExtResource( 3 )]
 position = Vector2( 2474, -108 )
@@ -72,64 +69,58 @@ position = Vector2( 3074.2, 302.399 )
 [node name="Demon_Big7" parent="Enemys" index="11" instance=ExtResource( 4 )]
 position = Vector2( 2804.85, 301.735 )
 
-[node name="Demon_Medium6" parent="Enemys" index="12" instance=ExtResource( 3 )]
-position = Vector2( 2135.42, -28.1175 )
-
-[node name="Demon_Big8" parent="Enemys" index="13" instance=ExtResource( 4 )]
+[node name="Demon_Big8" parent="Enemys" index="12" instance=ExtResource( 4 )]
 position = Vector2( 1744.64, -112.78 )
 
-[node name="Demon_Big9" parent="Enemys" index="14" instance=ExtResource( 4 )]
+[node name="Demon_Big9" parent="Enemys" index="13" instance=ExtResource( 4 )]
 position = Vector2( 1524.42, -35.165 )
 
-[node name="Demon_Big10" parent="Enemys" index="15" instance=ExtResource( 4 )]
+[node name="Demon_Big10" parent="Enemys" index="14" instance=ExtResource( 4 )]
 position = Vector2( 1190.58, -31.3158 )
 
-[node name="Demon_Medium7" parent="Enemys" index="16" instance=ExtResource( 3 )]
+[node name="Demon_Medium7" parent="Enemys" index="15" instance=ExtResource( 3 )]
 position = Vector2( 943.658, 51.8496 )
 
-[node name="Demon_Big11" parent="Enemys" index="17" instance=ExtResource( 4 )]
+[node name="Demon_Big11" parent="Enemys" index="16" instance=ExtResource( 4 )]
 position = Vector2( 640.147, 45.848 )
 
-[node name="Demon_Big12" parent="Enemys" index="18" instance=ExtResource( 4 )]
+[node name="Demon_Big12" parent="Enemys" index="17" instance=ExtResource( 4 )]
 position = Vector2( 319, -2 )
 
-[node name="Demon_Big13" parent="Enemys" index="19" instance=ExtResource( 4 )]
-position = Vector2( 1966.51, -32.5929 )
-
-[node name="Demon_Medium8" parent="Enemys" index="20" instance=ExtResource( 3 )]
+[node name="Demon_Medium8" parent="Enemys" index="18" instance=ExtResource( 3 )]
 position = Vector2( 2575.31, 18.9783 )
 
-[node name="Demon_Medium9" parent="Enemys" index="21" instance=ExtResource( 5 )]
+[node name="Demon_Medium9" parent="Enemys" index="19" instance=ExtResource( 5 )]
 position = Vector2( 2614.27, 20.4485 )
 
-[node name="Demon_Big14" parent="Enemys" index="22" instance=ExtResource( 4 )]
+[node name="Demon_Big14" parent="Enemys" index="20" instance=ExtResource( 4 )]
 position = Vector2( 3229.55, 302.724 )
 
-[node name="Demon_Big15" parent="Enemys" index="23" instance=ExtResource( 4 )]
+[node name="Demon_Big15" parent="Enemys" index="21" instance=ExtResource( 4 )]
 position = Vector2( 3442.72, 301.989 )
 
-[node name="Demon_Medium10" parent="Enemys" index="24" instance=ExtResource( 3 )]
+[node name="Demon_Medium10" parent="Enemys" index="22" instance=ExtResource( 3 )]
 position = Vector2( 3628.25, 244.309 )
 
-[node name="Demon_Medium11" parent="Enemys" index="25" instance=ExtResource( 3 )]
+[node name="Demon_Medium11" parent="Enemys" index="23" instance=ExtResource( 3 )]
 position = Vector2( 3735.1, 210.789 )
 
-[node name="Demon_Medium12" parent="Enemys" index="26" instance=ExtResource( 3 )]
+[node name="Demon_Medium12" parent="Enemys" index="24" instance=ExtResource( 3 )]
 position = Vector2( 3888.53, 180.895 )
 
-[node name="Demon_Medium13" parent="Enemys" index="27" instance=ExtResource( 3 )]
+[node name="Demon_Medium13" parent="Enemys" index="25" instance=ExtResource( 3 )]
 position = Vector2( 4164.52, 181.559 )
 
-[node name="Demon_Medium14" parent="Enemys" index="28" instance=ExtResource( 3 )]
+[node name="Demon_Medium14" parent="Enemys" index="26" instance=ExtResource( 3 )]
 position = Vector2( 4496.89, 100.621 )
 
-[node name="Demon_Medium15" parent="Enemys" index="29" instance=ExtResource( 3 )]
+[node name="Demon_Medium15" parent="Enemys" index="27" instance=ExtResource( 3 )]
 position = Vector2( 4916.83, 98.6311 )
 
-[node name="Demon_Medium16" parent="Enemys" index="30" instance=ExtResource( 3 )]
+[node name="Demon_Medium16" parent="Enemys" index="28" instance=ExtResource( 3 )]
 position = Vector2( 5831.03, 35.606 )
 
-[node name="Demon_Big16" parent="Enemys" index="31" instance=ExtResource( 4 )]
+[node name="Demon_Big16" parent="Enemys" index="29" instance=ExtResource( 4 )]
 position = Vector2( 6241.92, -65.6833 )
 
 [node name="Lava" parent="Props" index="0"]

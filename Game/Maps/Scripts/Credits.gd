@@ -1,7 +1,19 @@
 extends Control
 
 func _ready():
-	$Text/Label.text = str("Minuten: ", Game.highscore / 60, "  Sekunden: ", Game.highscore % 60)
+	
+	if Game.total_time <= Game.highscore:
+		Game.highscore = Game.total_time
+		print("New Highscore")
+	elif Game.highscore == 0:
+		Game.highscore = Game.total_time
+		print("New Score")
+		Main.save()
+	
+	Player.loadplayer(Player.klasse, Player.gender)
+	$Text/Label.text = str("M: ", Game.total_time / 60, " S: ", Game.total_time % 60)
+	$Text/HS.text = str("Highscore M: ", Game.highscore / 60, " S: ", Game.highscore % 60)
+	$other/Sprite.texture = load(Player.sprite)
 
 func _on_RichTextLabel_meta_clicked(meta):
 # warning-ignore:return_value_discarded

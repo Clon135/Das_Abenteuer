@@ -11,6 +11,8 @@ var dialog = [
 
 func _ready():
 	
+	Main.load_game()
+	
 	time_start = OS.get_unix_time()
 	set_process(true)
 	
@@ -78,6 +80,8 @@ func _on_NextLevel_body_entered(body):
 	if body.name == "Player":
 		Game.level003 = true
 		add_time()
+# warning-ignore:return_value_discarded
+		get_tree().change_scene(nextlevel)
 
 func add_time():
 	time_now = OS.get_unix_time()

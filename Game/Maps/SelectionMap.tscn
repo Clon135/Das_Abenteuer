@@ -6,11 +6,10 @@
 [ext_resource path="res://Player/Texturen/Player_M_Knight.png" type="Texture" id=4]
 [ext_resource path="res://Engine/Story/Dialog.tscn" type="PackedScene" id=5]
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10, 55 )
 
-[sub_resource type="Animation" id=1]
-resource_name = "idle"
+[sub_resource type="Animation" id=2]
 length = 0.4
 loop = true
 tracks/0/type = "value"
@@ -35,9 +34,6 @@ camera_limit_bottom = 256
 path = "res://Maps/SelectionMap.tscn"
 nextlevel = ""
 
-[node name="TileMaps" parent="." index="0"]
-editor/display_folded = false
-
 [node name="BG" parent="TileMaps" index="0"]
 tile_data = PoolIntArray( 262144, 1, 0, 262146, 1, 0, 262148, 1, 0, 262150, 1, 0, 262152, 1, 0, 262154, 1, 0, 262156, 1, 0, 262158, 1, 0, 262160, 1, 0, 262162, 1, 0, 262164, 1, 0, 262166, 1, 0, 262168, 1, 0, 327680, 10, 0, 327681, 1, 0, 327683, 1, 0, 327685, 1, 0, 327687, 1, 0, 327689, 1, 0, 327691, 1, 0, 327693, 1, 0, 327695, 1, 0, 327697, 1, 0, 327699, 1, 0, 327701, 1, 0, 327703, 1, 0, 327705, 10, 0, 393216, 1, 0, 393218, 1, 0, 393220, 1, 0, 393222, 1, 0, 393224, 1, 0, 393226, 1, 0, 393228, 1, 0, 393230, 1, 0, 393232, 1, 0, 393234, 1, 0, 393236, 1, 0, 393238, 1, 0, 393240, 1, 0, 458752, 10, 0, 458753, 1, 0, 458755, 1, 0, 458757, 1, 0, 458759, 1, 0, 458761, 1, 0, 458763, 1, 0, 458765, 1, 0, 458767, 1, 0, 458769, 1, 0, 458771, 1, 0, 458773, 1, 0, 458775, 1, 0, 458777, 10, 0, 524288, 1, 0, 524290, 1, 0, 524292, 1, 0, 524294, 1, 0, 524296, 1, 0, 524298, 1, 0, 524300, 1, 0, 524302, 1, 0, 524304, 1, 0, 524306, 1, 0, 524308, 1, 0, 524310, 1, 0, 524312, 1, 0, 589824, 10, 0, 589825, 1, 0, 589827, 1, 0, 589829, 1, 0, 589831, 1, 0, 589833, 1, 0, 589835, 1, 0, 589837, 1, 0, 589839, 1, 0, 589841, 1, 0, 589843, 1, 0, 589845, 1, 0, 589847, 1, 0, 589849, 10, 0 )
 
@@ -46,9 +42,6 @@ tile_data = PoolIntArray( 65533, 1, 0, 65534, 1, 1, 65535, 1, 1, 0, 1, 1, 1, 1, 
 
 [node name="CollisionShape2D" parent="TileMaps/DeathZone" index="0"]
 position = Vector2( 32, 288 )
-
-[node name="Props" parent="." index="2"]
-editor/display_folded = false
 
 [node name="ColorRect" type="ColorRect" parent="Props" index="2"]
 margin_left = 305.0
@@ -69,17 +62,21 @@ text = "Nastes level >"
 align = 1
 valign = 1
 
-[node name="Player" parent="Player" index="0"]
-position = Vector2( 152, 144 )
+[node name="Player" parent="." index="3"]
+editor/display_folded = true
 
-[node name="Sprite" parent="Player/Player" index="0"]
-position = Vector2( 2, 2 )
+[node name="Player" parent="Player" index="0"]
+position = Vector2( 167, 144 )
+
+[node name="NextLevel" parent="Player" index="1"]
+editor/display_folded = true
 
 [node name="CollisionShape2D" parent="Player/NextLevel" index="0"]
 position = Vector2( 409, 112 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="NPC" type="Node2D" parent="." index="4"]
+editor/display_folded = true
 
 [node name="NPC1" type="Node2D" parent="NPC" index="0"]
 
@@ -91,11 +88,12 @@ frame = 3
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="NPC/NPC1" index="1"]
 autoplay = "idle"
-anims/idle = SubResource( 1 )
+anims/idle = SubResource( 2 )
 
 [node name="Dialog" parent="NPC/NPC1" index="2" instance=ExtResource( 5 )]
+
+[node name="Timer" type="Timer" parent="." index="5"]
+wait_time = 0.1
+one_shot = true
 [connection signal="body_entered" from="Player/NextLevel" to="." method="_on_NextLevel_body_entered"]
-
-[editable path="Player/Player"]
-
-[editable path="Player/Player/PlayerHUD"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

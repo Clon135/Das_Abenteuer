@@ -3,6 +3,7 @@ extends CanvasLayer
 var health
 var klasse
 
+# warning-ignore:shadowed_variable
 func add_live(health):
 	
 	if klasse == "magier" || klasse == "elf":
@@ -72,6 +73,7 @@ func add_live(health):
 			$HighHealth/Hearts/Heart7.add_heart()
 			$HighHealth/Hearts/Heart8.add_heart()
 
+# warning-ignore:shadowed_variable
 func sub_live(health):
 	
 	if klasse == "magier" || klasse == "elf":

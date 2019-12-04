@@ -17,4 +17,4 @@ var level003_obj = false
 # warning-ignore:unused_class_variable
 var total_time = 0
 # warning-ignore:unused_class_variable
-var highscore = 126
+var highscore = 2
