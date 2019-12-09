@@ -56,18 +56,24 @@ func loadplayer(_klasse, _gender):
 			health = max_health
 			speed = 180
 			jump_height = -360
+			klasse = "elf"
+			gender = "male"
 		elif _klasse == "ritter":
 			sprite = "res://Player/Texturen/Player_M_Knight.png"
 			max_health = 8
 			health = max_health
 			speed = 90
 			jump_height = -350
+			klasse = "ritter"
+			gender = "male"
 		elif _klasse == "magier":
 			sprite = "res://Player/Texturen/Player_M_Wizard.png"
 			max_health = 5
 			health = max_health
 			speed = 130
 			jump_height = -350
+			klasse = "magier"
+			gender = "male"
 	elif _gender == "female":
 		if _klasse == "elf":
 			sprite = "res://Player/Texturen/Player_F_Elf.png"
@@ -75,15 +81,21 @@ func loadplayer(_klasse, _gender):
 			health = max_health
 			speed = 180
 			jump_height = -360
+			klasse = "elf"
+			gender = "female"
 		elif _klasse == "ritter":
 			sprite = "res://Player/Texturen/Player_F_Knight.png"
 			max_health = 8
 			health = max_health
 			speed = 90
 			jump_height = -350
+			klasse = "ritter"
+			gender = "female"
 		elif _klasse == "magier":
 			sprite = "res://Player/Texturen/Player_F_Wizard.png"
 			max_health = 5
 			health = max_health
 			speed = 130
 			jump_height = -350
+			klasse = "magier"
+			gender = "female"

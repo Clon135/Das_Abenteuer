@@ -101,11 +101,6 @@ func _on_Area2D_body_entered(body):
 func _on_Chest_closed():
 	overlapped = false
 
-func add_time():
-	time_now = OS.get_unix_time()
-	Game.total_time += time_now - time_start
-	print("Minuten: ", Game.total_time / 60, "Sekunden: ", Game.total_time % 60)
-
 func _on_Player_isdead():
 	add_time()
 

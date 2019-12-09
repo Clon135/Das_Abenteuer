@@ -91,8 +91,6 @@ func take_damage(amount):
 		if health <= 0:
 			health = 0
 			died()
-			
-		print(health)
 
 func heal(amount):
 	
@@ -109,7 +107,6 @@ func died():
 		health = max_health
 		$anim.play("died")
 		yield($anim, "animation_finished")
-		print("died")
 		$PlayerHUD/PlayerStats/MediumHealth.visible = false
 		$PlayerHUD/PlayerStats/HighHealth.visible = false
 		$PlayerHUD/isdead/AnimationPlayer.play("init")

@@ -15,7 +15,7 @@ extents = Vector2( 19, 35 )
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 1, 35 )
 
-[node name="TutorialMap" instance=ExtResource( 1 )]
+[node name="TutorialMap" index="0" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
 camera_limit_left = -96
 camera_limit_right = 1696

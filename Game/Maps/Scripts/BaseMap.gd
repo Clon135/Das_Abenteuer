@@ -48,8 +48,6 @@ func _on_NextLevel_body_entered(body):
 
 func _on_DeathZone_body_entered(body):
 	
-	print(body.name)
-	
 	if body.name == "Player":
 		body.died()
 
@@ -71,7 +69,6 @@ func _on_Pausenmenu_opend():
 func add_time():
 	time_now = OS.get_unix_time()
 	Game.total_time += time_now - time_start
-	print("Minuten: ", Game.total_time / 60, "Sekunden: ", Game.total_time % 60)
 
 func _on_Player_isdead():
 	add_time()

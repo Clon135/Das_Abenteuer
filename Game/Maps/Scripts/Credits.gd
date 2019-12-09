@@ -4,10 +4,8 @@ func _ready():
 	
 	if Game.total_time <= Game.highscore:
 		Game.highscore = Game.total_time
-		print("New Highscore")
 	elif Game.highscore == 0:
 		Game.highscore = Game.total_time
-		print("New Score")
 		Main.save()
 	
 	Player.loadplayer(Player.klasse, Player.gender)

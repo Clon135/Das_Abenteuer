@@ -51,14 +51,14 @@ func _physics_process(delta):
 
 func attack():
 	
-	body.take_damage(damage)
-	print("HIT")
-	$attack_cooldown.start()
-	oncooldown = true
-	yield($attack_cooldown, "timeout")
-	oncooldown = false
 	if body != null:
-		$AnimationPlayer.play("attack")
+		body.take_damage(damage)
+		$attack_cooldown.start()
+		oncooldown = true
+		yield($attack_cooldown, "timeout")
+		oncooldown = false
+		if body != null:
+			$AnimationPlayer.play("attack")
 
 func take_damage(amount):
 	leben -= amount
