@@ -23,3 +23,13 @@ func _input(event):
 	if Input.is_action_just_pressed("ui_cancel"):
 		
 		$AnimationPlayer.play("close")
+
+func _on_Retry_pressed():
+	
+	Main.save()
+	get_tree().change_scene("res://Maps/TutorialMap.tscn")
+
+func _on_Back_pressed():
+	
+	Main.save()
+	get_tree().change_scene("res://GUI/Menus/MainMenu.tscn")

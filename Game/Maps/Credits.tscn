@@ -238,8 +238,8 @@ custom_fonts/bold_italics_font = ExtResource( 3 )
 custom_fonts/italics_font = ExtResource( 3 )
 custom_fonts/normal_font = ExtResource( 3 )
 bbcode_enabled = true
-bbcode_text = "Die Story wurde von [color=aqua][url=https://www.instagram.com/dammi.de/?hl=de/]Florian D.[/url][/color]"
-text = "Die Story wurde von Florian D."
+bbcode_text = "Die Story wurde von [color=aqua][url=https://www.instagram.com/dammi.de/?hl=de/]Florian D.[/url][/color] Geschrieben"
+text = "Die Story wurde von Florian D. Geschrieben"
 
 [node name="PaulToni" type="RichTextLabel" parent="Text"]
 anchor_top = 0.5
@@ -254,8 +254,8 @@ custom_fonts/bold_italics_font = ExtResource( 3 )
 custom_fonts/italics_font = ExtResource( 3 )
 custom_fonts/normal_font = ExtResource( 3 )
 bbcode_enabled = true
-bbcode_text = "Die Level wurden von Paul H. und [color=aqua][url=https://www.instagram.com/tonischossau/?hl=de/]Toni S.[/url][/color]"
-text = "Die Level wurden von Paul H. und Toni S."
+bbcode_text = "Die Level wurden von Paul H. und [color=aqua][url=https://www.instagram.com/tonischossau/?hl=de/]Toni S.[/url][/color] Erstellt"
+text = "Die Level wurden von Paul H. und Toni S. Erstellt"
 
 [node name="PaulToni2" type="RichTextLabel" parent="Text"]
 anchor_top = 0.5
@@ -286,7 +286,7 @@ custom_fonts/bold_italics_font = ExtResource( 3 )
 custom_fonts/italics_font = ExtResource( 3 )
 custom_fonts/normal_font = ExtResource( 4 )
 bbcode_enabled = true
-bbcode_text = "[color=aqua][url=https://www.youtube.com/channel/UCAApUJNIjaNfySMom_zN43A]mehr[/url][/color]"
+bbcode_text = "[color=aqua][url=]mehr[/url][/color]"
 text = "mehr"
 
 [node name="Label" type="Label" parent="Text"]
@@ -434,3 +434,5 @@ current = true
 [connection signal="meta_clicked" from="Text/PaulToni" to="." method="_on_RichTextLabel_meta_clicked"]
 [connection signal="meta_clicked" from="Text/PaulToni2" to="." method="_on_RichTextLabel_meta_clicked"]
 [connection signal="meta_clicked" from="Text/more" to="." method="_on_RichTextLabel_meta_clicked"]
+[connection signal="pressed" from="Text/Retry" to="." method="_on_Retry_pressed"]
+[connection signal="pressed" from="Text/Back" to="." method="_on_Back_pressed"]
