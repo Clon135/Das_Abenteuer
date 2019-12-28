@@ -52,14 +52,17 @@ wait_time = 10.0
 
 [node name="stream1" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 3 )
+volume_db = 24.0
 bus = "Effekte"
 
 [node name="stream2" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 4 )
+volume_db = 24.0
 bus = "Effekte"
 
 [node name="stream3" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 5 )
+volume_db = 24.0
 bus = "Effekte"
 [connection signal="body_entered" from="." to="." method="_on_PlasmaBall_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

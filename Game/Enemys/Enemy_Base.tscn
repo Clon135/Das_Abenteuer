@@ -170,14 +170,17 @@ enabled = true
 
 [node name="died" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 2 )
+volume_db = 24.0
 bus = "Effekte"
 
 [node name="hit" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 3 )
+volume_db = 24.0
 bus = "Effekte"
 
 [node name="attack" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 4 )
+volume_db = 24.0
 bus = "Effekte"
 [connection signal="body_entered" from="Attackarea" to="." method="_on_Attackarea_body_entered"]
 [connection signal="body_exited" from="Attackarea" to="." method="_on_Attackarea_body_exited"]

@@ -35,8 +35,8 @@ func load_settings():
 		autosave = f.get_var()
 		f.close()
 	else:
-		musik = -40
-		effekts = -40
+		musik = -30
+		effekts = -30
 		showfps = false
 		fullscreen = false
 		borderless = false

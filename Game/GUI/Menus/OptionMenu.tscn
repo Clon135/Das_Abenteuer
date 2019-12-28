@@ -37,7 +37,7 @@ margin_top = 23.0
 margin_right = 320.0
 margin_bottom = 28.0
 min_value = -80.0
-max_value = 0.0
+max_value = -20.0
 value = -20.0
 ticks_on_borders = true
 

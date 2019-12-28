@@ -57,3 +57,8 @@ func _on_LoadGame_pressed():
 	
 # warning-ignore:return_value_discarded
 	get_tree().change_scene("res://Maps/SelectionMap.tscn")
+
+
+func _on_RichTextLabel_meta_clicked(meta):
+# warning-ignore:return_value_discarded
+	OS.shell_open(meta)
