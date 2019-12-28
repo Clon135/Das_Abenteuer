@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/troll_monster_death_05.wav-a4a443cde1e19d45301fc567d8567856.sample"
+
+[deps]
+
+source_file="res://Sounds/FX/monster/troll_monster_death_05.wav"
+dest_files=[ "res://.import/troll_monster_death_05.wav-a4a443cde1e19d45301fc567d8567856.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

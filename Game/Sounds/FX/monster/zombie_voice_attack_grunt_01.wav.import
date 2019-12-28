@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/zombie_voice_attack_grunt_01.wav-f6e025e99a4130f23496b6c9c3b423f8.sample"
+
+[deps]
+
+source_file="res://Sounds/FX/monster/zombie_voice_attack_grunt_01.wav"
+dest_files=[ "res://.import/zombie_voice_attack_grunt_01.wav-f6e025e99a4130f23496b6c9c3b423f8.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

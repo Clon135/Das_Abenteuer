@@ -15,6 +15,7 @@ func _ready():
 	
 	if path != "res://Maps/TutorialMap.tscn":
 		
+		Main.save()
 		$Player/Player.load_player(Player.klasse, Player.gender)
 	
 	if Player.level == path:

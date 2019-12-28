@@ -27,7 +27,8 @@ func load_game():
 		Game.total_time = f.get_var()
 		Game.highscore = f.get_var()
 		f.close()
-	Player.loadplayer(Player.klasse, Player.gender)
+		#print(Player.klasse, Player.gender)
+		Player.loadplayer(Player.klasse, Player.gender)
 
 func save():
 	var f = File.new()

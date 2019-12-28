@@ -19,6 +19,8 @@ export(bool) var vsync = true
 # warning-ignore:unused_class_variable
 export(bool) var autosave = true
 
+
+
 func load_settings():
 	
 	var f = File.new()
@@ -32,6 +34,14 @@ func load_settings():
 		vsync = f.get_var()
 		autosave = f.get_var()
 		f.close()
+	else:
+		musik = -40
+		effekts = -40
+		showfps = false
+		fullscreen = false
+		borderless = false
+		vsync = true
+		autosave = true
 	
 	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Musik"), musik)
 	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Effekte"), effekts)
@@ -53,3 +63,4 @@ func save_settings():
 	f.store_var(vsync)
 	f.store_var(autosave)
 	f.close()
+

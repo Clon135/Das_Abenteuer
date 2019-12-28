@@ -20,7 +20,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="The Rise Of Tree´s"
+config/name="Das Abenteuer"
 run/main_scene="res://Engine/Start/Start.tscn"
 config/icon="res://icon.png"
 
@@ -30,6 +30,7 @@ Player="*res://Engine/Autoload/Player_AL.gd"
 langindex="*res://Engine/Sprachen/SprachenIndex.gd"
 Main="*res://Engine/Autoload/Main.gd"
 Game="*res://Engine/Autoload/Game.gd"
+Musik="*res://Engine/Autoload/Musik.gd"
 
 [display]
 

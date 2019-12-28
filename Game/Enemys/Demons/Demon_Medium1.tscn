@@ -15,6 +15,7 @@ damage = 2
 speed = 40
 
 [node name="Sprite" parent="." index="0"]
+modulate = Color( 1, 1, 1, 1 )
 texture = ExtResource( 2 )
 
 [node name="RayCast2D" parent="." index="2"]

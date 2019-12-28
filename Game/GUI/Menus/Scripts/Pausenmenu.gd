@@ -26,6 +26,9 @@ func _ready():
 	$Control/VBoxContainer/Save.text = langindex.SelectedLanguage["save"]
 	$Control/VBoxContainer/Quit.text = langindex.SelectedLanguage["exit"]
 	
+	if Player.level == "res://Maps/TutorialMap.tscn":
+		$Control/VBoxContainer/Save.disabled = true
+	"res://Maps/TutorialMap.tscn"
 	if Main.inoptions:
 		offset.x = 0
 		$AnimationPlayer.play("inpaused")
@@ -65,8 +68,11 @@ func _on_Play_pressed():
 	PauseExited()
 
 func _on_Save_pressed():
-	Main.save()
+	
+	if Player.level != "res://Maps/TutorialMap.tscn":
+		Main.save()
 
 func _on_Quit_pressed():
-	Main.save()
+	if Player.level != "res://Maps/TutorialMap.tscn":
+		Main.save()
 	get_tree().quit()

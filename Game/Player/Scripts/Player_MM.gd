@@ -10,8 +10,6 @@ var can_jump = true
 
 func _ready():
 	
-	Player.loadplayer("elf", "male")
-	
 	$Sprite.texture = load(Player.playersprites[randi() % Player.playersprites.size()])
 
 func new_player_sprite():

@@ -7,7 +7,6 @@ func _ready():
 	
 	if Player.checkpoint == null or Player.checkpoint == "":
 		$Player/Player.load_player("ritter", "male")
-		Player.load_preset()
 	elif Player.checkpoint == checkpoint1:
 		$Player/Player.position = Vector2(832, 8)
 		$Player/Player.load_player("magier", "female")

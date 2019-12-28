@@ -2,8 +2,6 @@
 
 [ext_resource path="res://Engine/Settings/Settings.gd" type="Script" id=1]
 
-
-
 [resource]
 script = ExtResource( 1 )
 settingsfile = "res://settings.save"

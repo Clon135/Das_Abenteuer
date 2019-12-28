@@ -47,8 +47,8 @@ editor/display_folded = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player/NextLevel"]
 shape = SubResource( 2 )
 [connection signal="body_entered" from="TileMaps/DeathZone" to="." method="_on_DeathZone_body_entered"]
-[connection signal="isdead" from="Player/Player" to="." method="_on_Player_isdead"]
 [connection signal="isdead" from="Player/Player" to="." method="_on_Pausenmenu_opend"]
+[connection signal="isdead" from="Player/Player" to="." method="_on_Player_isdead"]
 [connection signal="closed" from="Player/Player/PlayerHUD/Pausenmenu" to="." method="_on_Pausenmenu_closed"]
 [connection signal="opend" from="Player/Player/PlayerHUD/Pausenmenu" to="." method="_on_Pausenmenu_opend"]
 

@@ -6,7 +6,7 @@ var languagefile = "res://language.save"
 func _ready():
 	
 	lang = "German"
-	load_game()
+	
 	
 	#var f = File.new()
 	#if f.file_exists(languagefile):
@@ -33,13 +33,13 @@ func _ready():
 		$Startmenu/aktion.text = str("Press A Button")
 	
 	randomize()
-	
+	load_game()
 
-func _input(event):
-	
-	if event is InputEventKey:
-		
-		load_game()
+#func _input(event):
+#	
+#if event is InputEventKey:
+##		
+#		load_game()
 
 func load_game():
 	
@@ -54,6 +54,7 @@ func load_game():
 	langindex.SelectedLanguage = langindex.Language[str(lang)]
 	$Load.load_game()
 	
+	Musik.load_musik()
 
 func _on_Eng_pressed():
 	

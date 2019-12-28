@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/music_bytes_the_retro_adventure.wav-b90f51b8c86f8331fc0fde06bbee5199.sample"
+
+[deps]
+
+source_file="res://Sounds/Musik/music_bytes_the_retro_adventure.wav"
+dest_files=[ "res://.import/music_bytes_the_retro_adventure.wav-b90f51b8c86f8331fc0fde06bbee5199.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=true
+compress/mode=0

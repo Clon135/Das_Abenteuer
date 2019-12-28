@@ -29,14 +29,12 @@ func _physics_process(delta):
 			$Sprite.flip_h = false
 			velocity.x = speed
 			$Position2D.position = Vector2(8.3 , 9.5)
-		
 		elif Input.is_action_pressed("ui_left"):
 			$anim.play("walk")
 			look_dir = "left"
 			$Sprite.flip_h = true
 			velocity.x = -speed
 			$Position2D.position = Vector2(-8.3 , 9.5)
-		
 		else:
 			if can_jump == true:
 				$anim.play("idle")
@@ -59,6 +57,8 @@ func _physics_process(delta):
 					p.set_plasmaball_stats(sign($Position2D.position.x), attack)
 					#print($Position2D.position, p.position, sign($Position2D.position.x))
 				if klasse == "ritter":
+					$FX/attack.stream = load(Player.aktivplayersounds["attacke1"])
+					$FX/attack.play()
 					if look_dir == "left":
 						$attack.play("attack_l")
 					else:
@@ -74,13 +74,9 @@ func _physics_process(delta):
 				$anim.play("jump")
 			else:
 				$anim.play("fall")
-		
-		
+				
 		velocity.y += gravity
-		
 		velocity = move_and_slide(velocity, FLOOR)
-	#else:
-		#$anim.play("idle")
 
 func take_damage(amount):
 	
@@ -88,6 +84,8 @@ func take_damage(amount):
 		health -= amount
 		Player.health = health
 		$PlayerHUD/PlayerStats.sub_live(health)
+		$FX/hit.stream = load(Player.aktivplayersounds["hit1"])
+		$FX/hit.play()
 		if health <= 0:
 			health = 0
 			died()
@@ -100,6 +98,7 @@ func heal(amount):
 		$PlayerHUD/PlayerStats.add_live(health)
 
 func died():
+	
 	if Player.isdead == false:
 		
 		$PlayerHUD/PlayerStats.sub_live(health)
@@ -110,6 +109,7 @@ func died():
 		$PlayerHUD/PlayerStats/MediumHealth.visible = false
 		$PlayerHUD/PlayerStats/HighHealth.visible = false
 		$PlayerHUD/isdead/AnimationPlayer.play("init")
+		$FX/died.play()
 		emit_signal("isdead")
 
 func _on_AttackCooltime_timeout():
@@ -132,6 +132,10 @@ func load_player(_klasse, _gender):
 		max_health = Player.max_health
 		speed = Player.speed
 		jump_height = Player.jump_height
+		
+		$FX/died.stream = load(Player.aktivplayersounds["died"])
+		$FX/attack.stream = load(Player.aktivplayersounds["attacke1"])
+		$FX/hit.stream = load(Player.aktivplayersounds["hit1"])
 		
 		$Sprite.texture = load(Player.sprite)
 		

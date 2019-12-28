@@ -14,6 +14,43 @@ var playersprites = ["res://Player/Texturen/Player_M_Elf.png",
 "res://Player/Texturen/Player_F_Wizard.png"]
 
 # warning-ignore:unused_class_variable
+var playersounds = {
+	"ritter" : {
+		'walk' : "res://Sounds/FX/ritter/walk.wav",
+		'attacke1' : "res://Sounds/FX/ritter/attacke1.wav",
+		'attacke2' : "res://Sounds/FX/ritter/attacke2.wav",
+		'attacke3' : "res://Sounds/FX/ritter/attacke3.wav",
+		'hit1' : "res://Sounds/FX/ritter/hit1.wav",
+		'hit2' : "res://Sounds/FX/ritter/hit2.wav",
+		'hit3' : "res://Sounds/FX/ritter/hit3.wav",
+		'died' : "res://Sounds/FX/ritter/died.wav"
+	},
+	"magier" : {
+		'walk' : "res://Sounds/FX/magier/walk.wav",
+		'attacke1' : "res://Sounds/FX/magier/attacke1.wav",
+		'attacke2' : "res://Sounds/FX/magier/attacke2.wav",
+		'attacke3' : "res://Sounds/FX/magier/attacke3.wav",
+		'hit1' : "res://Sounds/FX/magier/hit1.wav",
+		'hit2' : "res://Sounds/FX/magier/hit2.wav",
+		'hit3' : "res://Sounds/FX/magier/hit3.wav",
+		'died' : "res://Sounds/FX/magier/died.wav"
+	},
+	"elf" : {
+		'walk' : "res://Sounds/FX/elf/walk.wav",
+		'attacke1' : "res://Sounds/FX/elf/attacke1.wav",
+		'attacke2' : "res://Sounds/FX/elf/attacke2.wav",
+		'attacke3' : "res://Sounds/FX/elf/attacke3.wav",
+		'hit1' : "res://Sounds/FX/elf/hit1.wav",
+		'hit2' : "res://Sounds/FX/elf/hit2.wav",
+		'hit3' : "res://Sounds/FX/elf/hit3.wav",
+		'died' : "res://Sounds/FX/elf/died.wav"
+	}
+}
+
+# warning-ignore:unused_class_variable
+var aktivplayersounds = playersounds["ritter"]
+
+# warning-ignore:unused_class_variable
 var level = "res://Maps/TestMap.tscn"
 # warning-ignore:unused_class_variable
 var levelposition = Vector2()
@@ -58,6 +95,7 @@ func loadplayer(_klasse, _gender):
 			jump_height = -360
 			klasse = "elf"
 			gender = "male"
+			aktivplayersounds = playersounds["elf"]
 		elif _klasse == "ritter":
 			sprite = "res://Player/Texturen/Player_M_Knight.png"
 			max_health = 8
@@ -66,6 +104,7 @@ func loadplayer(_klasse, _gender):
 			jump_height = -350
 			klasse = "ritter"
 			gender = "male"
+			aktivplayersounds = playersounds["ritter"]
 		elif _klasse == "magier":
 			sprite = "res://Player/Texturen/Player_M_Wizard.png"
 			max_health = 5
@@ -74,6 +113,7 @@ func loadplayer(_klasse, _gender):
 			jump_height = -350
 			klasse = "magier"
 			gender = "male"
+			aktivplayersounds = playersounds["magier"]
 	elif _gender == "female":
 		if _klasse == "elf":
 			sprite = "res://Player/Texturen/Player_F_Elf.png"
@@ -83,6 +123,7 @@ func loadplayer(_klasse, _gender):
 			jump_height = -360
 			klasse = "elf"
 			gender = "female"
+			aktivplayersounds = playersounds["elf"]
 		elif _klasse == "ritter":
 			sprite = "res://Player/Texturen/Player_F_Knight.png"
 			max_health = 8
@@ -91,6 +132,7 @@ func loadplayer(_klasse, _gender):
 			jump_height = -350
 			klasse = "ritter"
 			gender = "female"
+			aktivplayersounds = playersounds["ritter"]
 		elif _klasse == "magier":
 			sprite = "res://Player/Texturen/Player_F_Wizard.png"
 			max_health = 5
@@ -99,3 +141,5 @@ func loadplayer(_klasse, _gender):
 			jump_height = -350
 			klasse = "magier"
 			gender = "female"
+			aktivplayersounds = playersounds["magier"]
+	#print(_klasse, _gender, klasse, gender)

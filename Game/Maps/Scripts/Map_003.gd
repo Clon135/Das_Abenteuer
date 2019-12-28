@@ -86,7 +86,7 @@ func _on_NextLevel_body_entered(body):
 func add_time():
 	time_now = OS.get_unix_time()
 	Game.total_time += time_now - time_start
-	print("Minuten: ", Game.total_time / 60, "Sekunden: ", Game.total_time % 60)
+	#print("Minuten: ", Game.total_time / 60, "Sekunden: ", Game.total_time % 60)
 
 func _on_Player_isdead():
 	add_time()

@@ -1,7 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Player/Scripts/PlasmaBall.gd" type="Script" id=1]
 [ext_resource path="res://Enemys/Demons/Textures/EnergyBall.png" type="Texture" id=2]
+[ext_resource path="res://Sounds/FX/magier/attacke1.wav" type="AudioStream" id=3]
+[ext_resource path="res://Sounds/FX/magier/attacke2.wav" type="AudioStream" id=4]
+[ext_resource path="res://Sounds/FX/magier/attacke3.wav" type="AudioStream" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 2.83849, 1.58075 )
@@ -46,5 +49,17 @@ anims/fly = SubResource( 2 )
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 10.0
+
+[node name="stream1" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )
+bus = "Effekte"
+
+[node name="stream2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 4 )
+bus = "Effekte"
+
+[node name="stream3" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 5 )
+bus = "Effekte"
 [connection signal="body_entered" from="." to="." method="_on_PlasmaBall_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

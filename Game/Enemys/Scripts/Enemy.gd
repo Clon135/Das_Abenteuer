@@ -59,12 +59,14 @@ func attack():
 		oncooldown = false
 		if body != null:
 			$AnimationPlayer.play("attack")
+			$attack.play()
 
 func take_damage(amount):
 	leben -= amount
 	if leben <= 0:
 		died()
-	pass
+	else:
+		$hit.play()
 
 func died():
 	isdead = true

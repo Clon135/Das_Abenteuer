@@ -46,6 +46,7 @@ func _on_TextureButton_pressed():
 		get_tree().change_scene("res://GUI/Menus/MainMenu.tscn")
 
 func _on_Musik_value_changed(value):
+	
 	gamesettings.musik = value
 	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Musik"), gamesettings.musik)
 

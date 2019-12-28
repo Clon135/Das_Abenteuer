@@ -24,6 +24,19 @@ func set_plasmaball_stats(dir, dmg):
 	if dir == -1:
 		$Sprite.flip_h = true
 	damage = dmg
+	
+	var count = randi() % 3 + 1
+	
+	match count:
+		1:
+			$stream1.play()
+			print("1")
+		2:
+			$stream2.play()
+			print("2")
+		3:
+			$stream3.play()
+			print("3")
 
 func _on_PlasmaBall_body_entered(body):
 	
